@@ -1,0 +1,39 @@
+body {
+    background-color: #fafafa;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+#main-content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 80%;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+p {
+    color: darkred;
+    margin-top: 0px;
+}
+
+span.username, div.username {
+    display: inline;
+    color: rgb(91, 121, 255);
+}
+
+div.back-to-top-container {
+    margin-bottom: 40px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 69px;
+}
+
+a.back-to-top {
+    font-size: 12px;
+}

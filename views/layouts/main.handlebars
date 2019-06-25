@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Message Board</title>
+        {{#if (equals theme "light")}}
+            <link rel="stylesheet" type="text/css" href="/styles/mainstyle.css">
+        {{else}}
+            <link rel="stylesheet" type="text/css" href="/styles/mainstyle-dark.css">
+        {{/if}}
+    </head>
+    <body>
+        {{> navigationbar}}
+        <div id='main-content'>
+            {{{body}}}
+        </div>
+    </body>
+</html>

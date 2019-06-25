@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css" href="/styles/usersstyle.css">
+<h1>Registered Users</h1>
+<div class="container">
+    {{#if message}}
+        <p>
+            {{message}}
+        </p>
+    {{/if}}
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Post Permission</th>
+            <th>Modify User</th>
+        </tr>
+        {{#each users}}
+        <tr>
+            <td>{{this.username}}</td>
+            <td>{{this.postPermission}}</td>
+            <td>
+                <form>
+                    {{#if (notEquals username "Administrator")}}
+                    <button class="permission-button" type="submit" formmethod="POST" formaction="/togglepermission?user={{this.username}}">Toggle Post Permission</button>
+                        <button class="delete-button" type="submit" formmethod="POST" formaction="/deleteuser?user={{this.username}}">Delete User</button>
+                    {{/if}}
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<a class="createuser-link" href="/createuser">+ Add User</a>

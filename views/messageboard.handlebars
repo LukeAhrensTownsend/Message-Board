@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="/styles/messageboardstyle.css">
+<h1>Message Board</h1>
+
+{{#if (isLoggedIn)}}
+    <span>Post message as <span class="username">{{username}}</span></span>
+{{else}}
+    <span>Please <a href="/login"><span class="username">login</span></a> or <a href="/createaccount"><span class="username">create an account</span></a> to post a messsage</span>
+{{/if}}
+<form id="message-form" method="POST" action="/postmessage">
+    <textarea id="message-area" form="message-form" type="text" name="message" placeholder="Type your message here.."
+        maxlength="750" onkeydown="updateCharRemaining(event)" required></textarea><br>
+    <button type="submit">Post Message</button><span id="char-remaining">750</span> characters remaining.
+</form>
+
+{{#if message}}
+    <br><p>
+        {{message}} {{#unless isLoggedIn}}<a class="create-account-link" href="createaccount">here</a>.{{/unless}}
+    </p>
+{{/if}}
+
+<hr>
+
+<span>Sorting by: <b>{{sortorder}}</b></span>
+{{#each posts}}
+<div class="post">
+    <span class="username">{{this.username}}</span>
+    <span class="dot"></span>
+    <span class="timestamp-field">{{this.timestamp}}</span>
+    {{#if (or (equals ../username "Administrator") (equals ../username username))}}
+        <span class="dot"></span>
+        <form style="display: inline;" id="deletepost-form-{{this._id}}" method="POST" action="/deletepost?postid={{this._id}}&origin=messageboard">
+            <a id="deletepost-link" href="javascript:document.getElementById('deletepost-form-{{this._id}}').submit()">Delete post</a>
+        </form>
+    {{/if}}
+    <br><p class="message">{{this.message}}</p>
+</div>
+{{else}}
+<div id="empty-message">(Empty)</div>
+{{/each}}
+
+<div class="back-to-top-container">
+    <a class="back-to-top" href="#top">Back to top</a>
+</div>
+
+<script src="/scripts/char-remaining-controller.js"></script>
+<script src="/scripts/timestamp-display-controller.js"></script>

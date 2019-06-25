@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="/styles/settingsstyle.css">
+<h1>Settings</h1>
+<div class="container">
+    <form method="POST" action="/confirmsettings">
+    <div>        
+        <div class="select-option">
+            <select class="select-option" name="sortorder">
+                {{#if (equals sortorder "newest")}}
+                    <option value="newest">Newest (default)</option>
+                    <option value="oldest">Oldest</option>
+                {{else}}
+                    <option value="oldest">Oldest</option>
+                    <option value="newest">Newest (default)</option>
+                {{/if}}
+            </select>
+        </div>
+        <label for="sort-order">Sort messages by:</label>
+        </div><br><br><br>
+
+        <div>
+        <div class="select-option">
+            <select class="select-option" name="theme">
+                {{#if (equals theme "light")}}
+                    <option value="light">Light (default)</option>
+                    <option value="dark">Dark</option>
+                {{else}}
+                    <option value="dark">Dark</option>
+                    <option value="light">Light (default)</option>
+                {{/if}}
+            </select>
+        </div>
+        <label for="site-theme">Theme:</label>
+        </div>
+        <button type="submit">Save Changes</button>
+    </form>
+    {{#if message}}
+    <br><p>
+        {{message}}
+    </p>
+{{/if}}
+</div>

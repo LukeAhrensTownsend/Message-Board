@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" href="/styles/messageboardstyle.css">
+<h1>My Posts</h1>
+
+<span>Sorting by: <b>{{sortorder}}</b></span>
+{{#each posts}}
+<div class="post">
+    <span class="username">{{this.username}}</span>
+    <span class="dot"></span>
+    <span class="timestamp-field">{{this.timestamp}}</span>
+    <span class="dot"></span>
+    <form style="display: inline;" id="deletepost-form-{{this._id}}" method="POST" action="/deletepost?postid={{this._id}}&origin=myposts">
+        <a id="deletepost-link" href="javascript:document.getElementById('deletepost-form-{{this._id}}').submit()">Delete post</a>
+    </form>
+    <br><p class="message">{{this.message}}</p>
+</div>
+
+{{else}}
+<div id="empty-message">(Empty)</div>
+{{/each}}
+
+<div class="back-to-top-container">
+    <a class="back-to-top" href="#top">Back to top</a>
+</div>
+
+<script src="/scripts/timestamp-display-controller.js"></script>

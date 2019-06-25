@@ -1,0 +1,88 @@
+a {
+    text-decoration: none;
+}
+
+#deletepost-link {
+    font-size: 11px;
+}
+
+form {
+    margin: 0;
+    width: 500px;
+}
+
+textarea {
+    height: 80px;
+    width: 100%;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    border-radius: 1px;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+div.post {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+}
+
+hr {
+    margin: 25px 0 15px 0;
+}
+
+span {
+    font-size: 11px;
+}
+
+#char-remaining {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+span.dot {
+    height: 4px;
+    width: 4px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+p.message {
+    color: black;
+    font-size: 14px;
+    margin: 2px 0;
+    word-wrap: normal;
+}
+
+span.sorting-by {
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+#empty-message {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}

@@ -1,0 +1,48 @@
+#logged-in-as {
+    color: #111;
+    display: block; 
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a {
+    color: #111;
+    display: block; 
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+li a:hover {
+    background-color: #ddd;
+}
+
+.left {
+    border-right: 1px solid #aaa;
+    float: left;
+}
+
+.right {
+    border-left: 1px solid #aaa;
+    float: right;
+}
+
+.right:last-child {
+    border: none;
+}
+
+ul {
+    background-color: #eaeaea;
+    border-bottom: 1px solid #666;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-width: 713px;
+}

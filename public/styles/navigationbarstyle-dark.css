@@ -1,0 +1,53 @@
+#logged-in-as {
+    color: #ddd;
+    display: block; 
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.blue {
+    display: inline;
+    color: rgb(91, 121, 255);
+}
+
+li a {
+    color: #ddd;
+    display: block; 
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+li a:hover {
+    background-color: rgb(91, 121, 255);;
+}
+
+.left {
+    border-right: 1px solid #777;
+    float: left;
+}
+
+.right {
+    border-left: 1px solid #777;
+    float: right;
+}
+
+.right:last-child {
+    border: none;
+}
+
+ul {
+    background-color: #555;
+    border-bottom: 1px solid #ddd;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-width: 713px;
+}

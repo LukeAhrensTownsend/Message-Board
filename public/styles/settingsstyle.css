@@ -1,0 +1,48 @@
+button {
+    background-color: #4CAF50;
+    border-radius: 1px;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+label {
+    float: right;
+    padding-top: 5px;
+}
+
+p {
+    color: #4CAF50;
+}
+
+.container {
+    width: 358px;
+}
+
+.select-option {
+    border: 1px solid #ccc;
+    display: block;
+    float: right;
+    margin-left: 5px;
+    width: 200px;
+    border-radius: 3px;
+}
+
+.select-option select {
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.select-option select:focus {
+    outline: none;
+}

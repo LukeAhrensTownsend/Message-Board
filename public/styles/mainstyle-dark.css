@@ -1,0 +1,98 @@
+body {
+    background-color: #333;
+    color: #ddd;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+#main-content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 80%;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+p {
+    color: rgb(255, 31, 31);
+    margin-top: 0px;
+}
+
+p.message {
+    color: #ddd !important;
+}
+
+span.username, div.username {
+    display: inline;
+    color: rgb(91, 121, 255);
+}
+
+div.back-to-top-container {
+    margin-bottom: 40px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 69px;
+}
+
+a.back-to-top {
+    font-size: 12px;
+}
+
+a.back-to-top, a.create-account-link {
+    color: rgb(91, 121, 255);
+}
+
+input, textarea, .select-option {
+    background-color: #777;
+    color: #ddd
+}
+
+div.post {
+    background-color: #444 !important;
+}
+
+input::-webkit-input-placeholder {
+    color: #ddd !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: #ddd !important;  
+}
+     
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: #ddd !important;  
+}
+     
+input:-ms-input-placeholder {  
+    color: #ddd !important;  
+}
+
+textarea::-webkit-input-placeholder {
+    color: #ddd !important;
+}
+     
+textarea:-moz-placeholder { /* Firefox 18- */
+    color: #ddd !important;  
+}
+     
+textarea::-moz-placeholder {  /* Firefox 19+ */
+    color: #ddd !important;  
+}
+     
+textarea:-ms-input-placeholder {  
+    color: #ddd !important;  
+}
+
+span.dot {
+    background-color: #ddd !important;
+}
+
+#deletepost-link:link {
+    font-size: 11px;
+    color: rgb(91, 121, 255);
+}

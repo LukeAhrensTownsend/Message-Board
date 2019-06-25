@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="/styles/createuserstyle.css">
+
+<h1>Create User</h1>
+{{#if message}}
+<p>
+    {{message}}
+</p>
+{{/if}}
+<form method="POST" action="/registeruser?origin=createuser">
+    <label for="username"><b>Username</b></label>
+    <input type="text" name="username" placeholder="Enter Username" maxlength="20" required><br>
+
+    <label for="password1"><b>Password</b></label>
+    <input type="password" name="password1" placeholder="Enter Password" maxlength="20" required><br>
+
+    <label for="password2"><b>Re-type Password</b></label>
+    <input type="password" name="password2" placeholder="Enter Password" maxlength="20" required><br>
+
+    <label for="postPermission"><b>Permission to post:</b></label>
+    <input type="checkbox" class="checkmark" name="postpermission" checked="checked"><br>
+
+    <button type="submit">Confirm</button>
+</form>
